@@ -2,6 +2,7 @@
 a. Perhitungan Manual
 b. Penyelesaian menggunakan bahasa python
 
+Anggota Kelompok 2
 
 <div style="border:1px solid #ccc; padding:10px; border-radius:8px;">
   <strong>Virganda Rimba Asmara</strong><br>
