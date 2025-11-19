@@ -12,10 +12,9 @@ class Particle:
 
     # ----------------------------------------------------------------------
     def update_kecepatan(self, w, c1, r1, c2, r2, gbest):
-        """Update velocity sesuai versi dosen (x = pbest tiap iterasi)."""
-        x = self.pbest  # ❗ DOSEN VERSION: x = pBest, bukan posisi real
+        x = self.pbest  
 
-        cognitive = c1 * r1 * (self.pbest - x)       # = 0
+        cognitive = c1 * r1 * (self.pbest - x)    
         social = c2 * r2 * (gbest - x)
 
         self.kecepatan = w * self.kecepatan + cognitive + social
@@ -26,8 +25,6 @@ class Particle:
         s = PSOUtils.sigmoid(self.kecepatan)
         new_posisi = PSOUtils.update_posisi(s, rand_check)
 
-        # ❗ INI ATURAN DOSEN:
-        # Setelah dapat posisi baru, nilai X langsung dianggap sebagai pBest
         self.posisi = new_posisi.copy()
 
         return s, self.posisi
